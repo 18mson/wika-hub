@@ -1,7 +1,17 @@
 import { MapPin, Navigation, Zap, Clock } from 'lucide-react';
 import { chargingStations } from '../data/mockData';
+import { ChargingStation } from '../types';
 
 export default function MapPage() {
+  const handleNavigate = (station: ChargingStation) => {
+    const destination = station.lat && station.lng
+      ? `${station.lat},${station.lng}`
+      : encodeURIComponent(station.address);
+
+    const url = `https://www.google.com/maps/dir/?api=1&destination=${destination}`;
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
+
   const getAvailabilityColor = (available: number, total: number) => {
     const percentage = (available / total) * 100;
     if (percentage > 50) return 'text-green-600';
@@ -84,6 +94,8 @@ export default function MapPage() {
               </div>
 
               <button
+                type="button"
+                onClick={() => handleNavigate(station)}
                 className={`w-full py-3 font-semibold text-sm transition-colors ${
                   station.availableSlots > 0
                     ? 'bg-blue-600 hover:bg-blue-700 text-white'
@@ -91,7 +103,7 @@ export default function MapPage() {
                 }`}
                 disabled={station.availableSlots === 0}
               >
-                {station.availableSlots > 0 ? 'Navigate & Reserve' : 'No Slots Available'}
+                {station.availableSlots > 0 ? 'Navigate' : 'No Slots Available'}
               </button>
             </div>
           ))}
