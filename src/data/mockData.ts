@@ -2,8 +2,8 @@ import { MotorProfile, ChargingStation, Transaction, User } from '../types';
 
 export const userProfile: User = {
   name: 'John Doe',
-  avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face',
-  email: 'john.doe@example.com',
+  avatar: '/src/assets/avatar_sample.jpg',
+  phone: '+62 812-3456-7890',
 };
 
 export const motorProfile: MotorProfile = {

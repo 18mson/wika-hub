@@ -1,7 +1,7 @@
 export interface User {
   name: string;
   avatar: string;
-  email: string;
+  phone: string;
 }
 
 export interface MotorProfile {

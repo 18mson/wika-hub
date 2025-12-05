@@ -37,7 +37,7 @@ export default function ProfilePage() {
           />
           <div>
             <h2 className="text-xl font-bold text-gray-800">{userProfile.name}</h2>
-            <p className="text-sm text-gray-500">{userProfile.email}</p>
+            <p className="text-sm text-gray-500">{userProfile.phone}</p>
           </div>
         </div>
       </div>
