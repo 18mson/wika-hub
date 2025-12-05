@@ -28,7 +28,7 @@ export default function MapPage() {
 
   return (
     <div className="pb-6">
-      <div className="h-48 relative overflow-hidden rounded-lg">
+      <div className="h-48 overflow-hidden rounded-lg sticky top-6 z-10 -mt-6 border-b-4 border-gray-300">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521853759907!2d106.816666!3d-6.200000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5d2e764b12d%3A0x3d2ad6e1e0e9bcc8!2sJakarta%2C%20Indonesia!5e0!3m2!1sen!2s!4v1690000000000!5m2!1sen!2s"
           width="100%"

@@ -35,8 +35,8 @@ export default function SosPage() {
   };
 
   return (
-    <div className="pb-6">
-      <div className="bg-gradient-to-br from-red-600 to-red-700 h-44 relative overflow-hidden rounded-b-2xl">
+    <div className="pb-6 px-4 max-w-lg mx-auto">
+      <div className="bg-gradient-to-br from-red-600 to-red-700 h-52 relative overflow-hidden rounded-2xl p-6">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-6 left-6 w-3 h-3 bg-white rounded-full animate-pulse"></div>
           <div className="absolute top-20 right-12 w-2 h-2 bg-yellow-300 rounded-full animate-pulse"></div>
@@ -57,7 +57,7 @@ export default function SosPage() {
         </div>
       </div>
 
-      <div className="px-4 mt-4 max-w-lg mx-auto">
+      <div className="mt-4 max-w-lg mx-auto">
         <div className="flex items-center justify-between mb-3">
           <h3 className="text-sm font-semibold text-gray-800">Service History</h3>
           <span className="text-xs text-gray-500">{history.length} records</span>

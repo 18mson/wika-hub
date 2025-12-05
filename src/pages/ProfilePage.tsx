@@ -1,4 +1,4 @@
-import { Navigation, Gauge, Calendar, CreditCard, AlertCircle, User } from 'lucide-react';
+import { Navigation, Gauge, Calendar, CreditCard, AlertCircle } from 'lucide-react';
 import { motorProfile, userProfile } from '../data/mockData';
 
 export default function ProfilePage() {
