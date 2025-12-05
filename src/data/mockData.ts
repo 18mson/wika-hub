@@ -1,8 +1,14 @@
-import { MotorProfile, ChargingStation, Transaction } from '../types';
+import { MotorProfile, ChargingStation, Transaction, User } from '../types';
+
+export const userProfile: User = {
+  name: 'John Doe',
+  avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face',
+  email: 'john.doe@example.com',
+};
 
 export const motorProfile: MotorProfile = {
-  id: 'WK-2024-001',
-  model: 'Wika E-Sport 3000',
+  id: 'MK-2024-001',
+  model: 'Maka E-Sport 3000',
   batteryLevel: 78,
   range: 156,
   totalMileage: 3847,
@@ -14,7 +20,7 @@ export const motorProfile: MotorProfile = {
 export const chargingStations: ChargingStation[] = [
   {
     id: 'cs-1',
-    name: 'Wika Station Central',
+    name: 'Maka Station Central',
     address: 'Jl. Sudirman No. 45, Jakarta',
     distance: 0.8,
     availableSlots: 3,
@@ -74,7 +80,7 @@ export const generateTransactions = (): Transaction[] => {
   const types: ('charge' | 'payment' | 'credit')[] = ['charge', 'payment', 'credit'];
   const statuses: ('completed' | 'pending' | 'failed')[] = ['completed', 'pending', 'failed'];
   const locations = [
-    'Wika Station Central',
+    'Maka Station Central',
     'Plaza Indonesia Hub',
     'Grand Indonesia',
     'Senayan City',
@@ -115,3 +121,29 @@ export const generateTransactions = (): Transaction[] => {
 
   return transactions.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 };
+
+export const sosNumber = '+628001234567';
+
+export const sosHistory = [
+  {
+    id: 'sos-1',
+    date: new Date().toISOString(),
+    contact: '+62 800-123-4567',
+    note: 'Assisted with towing and battery boost',
+    status: 'completed',
+  },
+  {
+    id: 'sos-2',
+    date: new Date(Date.now() - 1000 * 60 * 60 * 24).toISOString(),
+    contact: '+62 811-222-333',
+    note: 'Arrived late due to traffic',
+    status: 'completed',
+  },
+  {
+    id: 'sos-3',
+    date: new Date(Date.now() - 1000 * 60 * 60 * 48).toISOString(),
+    contact: '+62 812-999-000',
+    note: 'Unable to reach location',
+    status: 'failed',
+  },
+];

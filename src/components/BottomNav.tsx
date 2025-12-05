@@ -1,8 +1,8 @@
-import { User, MapPin, Receipt } from 'lucide-react';
+import { User, MapPin, Receipt, Siren } from 'lucide-react';
 
 interface BottomNavProps {
-  currentPage: 'profile' | 'map' | 'transactions';
-  onPageChange: (page: 'profile' | 'map' | 'transactions') => void;
+  currentPage: 'profile' | 'map' | 'transactions' | 'sos';
+  onPageChange: (page: 'profile' | 'map' | 'transactions' | 'sos') => void;
 }
 
 export default function BottomNav({ currentPage, onPageChange }: BottomNavProps) {
@@ -27,6 +27,16 @@ export default function BottomNav({ currentPage, onPageChange }: BottomNavProps)
         >
           <MapPin size={24} />
           <span className="text-xs mt-1 font-medium">Charging</span>
+        </button>
+
+        <button
+          onClick={() => onPageChange('sos')}
+          className={`flex flex-col items-center justify-center flex-1 h-full transition-colors ${
+            currentPage === 'sos' ? 'text-blue-600' : 'text-gray-400'
+          }`}
+        >
+          <Siren size={24} />
+          <span className="text-xs mt-1 font-medium">SOS</span>
         </button>
 
         <button

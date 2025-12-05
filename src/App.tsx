@@ -4,8 +4,9 @@ import BottomNav from './components/BottomNav';
 import ProfilePage from './pages/ProfilePage';
 import MapPage from './pages/MapPage';
 import TransactionsPage from './pages/TransactionsPage';
+import SosPage from './pages/SosPage';
 
-type PageType = 'profile' | 'map' | 'transactions';
+type PageType = 'profile' | 'map' | 'transactions' | 'sos';
 
 function App() {
   const [currentPage, setCurrentPage] = useState<PageType>('profile');
@@ -18,7 +19,9 @@ function App() {
         return 'Charging Stations';
       case 'transactions':
         return 'Payment History';
-      default:
+      case 'sos':
+        return 'Emergency SOS';
+      default:        
         return '';
     }
   };
@@ -31,6 +34,8 @@ function App() {
         return <MapPage />;
       case 'transactions':
         return <TransactionsPage />;
+      case 'sos':
+        return <SosPage />;
       default:
         return <ProfilePage />;
     }

@@ -28,20 +28,17 @@ export default function MapPage() {
 
   return (
     <div className="pb-6">
-      <div className="bg-gradient-to-br from-gray-700 to-gray-800 h-48 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-4 left-4 w-3 h-3 bg-blue-400 rounded-full animate-pulse"></div>
-          <div className="absolute top-12 right-8 w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-          <div className="absolute bottom-8 left-12 w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></div>
-          <div className="absolute bottom-12 right-16 w-3 h-3 bg-red-400 rounded-full"></div>
-        </div>
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-center text-white">
-            <MapPin size={48} className="mx-auto mb-2 opacity-80" />
-            <p className="text-sm opacity-80">Map visualization</p>
-            <p className="text-xs opacity-60 mt-1">Showing nearby charging stations</p>
-          </div>
-        </div>
+      <div className="h-48 relative overflow-hidden rounded-lg">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521853759907!2d106.816666!3d-6.200000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5d2e764b12d%3A0x3d2ad6e1e0e9bcc8!2sJakarta%2C%20Indonesia!5e0!3m2!1sen!2s!4v1690000000000!5m2!1sen!2s"
+          width="100%"
+          height="100%"
+          style={{ border: 0 }}
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          title="Jakarta Map"
+        ></iframe>
       </div>
 
       <div className="px-4 mt-4 max-w-lg mx-auto">

@@ -1,3 +1,9 @@
+export interface User {
+  name: string;
+  avatar: string;
+  email: string;
+}
+
 export interface MotorProfile {
   id: string;
   model: string;
