@@ -1,8 +1,9 @@
 import { MotorProfile, ChargingStation, Transaction, User } from '../types';
+import avatarSample from '../assets/avatar_sample.jpg';
 
 export const userProfile: User = {
   name: 'Jonathan Santo',
-  avatar: '/src/assets/avatar_sample.jpg',
+  avatar: avatarSample,
   phone: '+62 812-3456-7890',
 };
 
